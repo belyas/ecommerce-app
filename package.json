@@ -42,7 +42,7 @@
     "lint-stage": "eslint './packages/**/*.ts'"
   },
   "lint-staged": {
-    "packages/**/*.ts": [
+    "packages/**/*.{ts,tsx}": [
       "prettier --write",
       "yarn lint-stage"
     ]
