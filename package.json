@@ -1,0 +1,10 @@
+{
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "description": "A Typescript Node/React ecommerce monorepo app",
+  "main": "index.js",
+  "repository": "https://github.com/belyas/ecommerce-app",
+  "author": "Yassine Belkaid <yassine.belkaid87@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
