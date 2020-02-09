@@ -2,35 +2,43 @@
   "name": "@by/ecommerce-app",
   "version": "1.0.0",
   "description": "A Typescript Node/React ecommerce monorepo app",
-  "main": "index.js",
   "repository": "https://github.com/belyas/ecommerce-app",
   "author": "Yassine Belkaid <yassine.belkaid87@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "engines": {
     "node": ">=10"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@types/node": "^13.7.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.1",
+    "jest": "^25.1.0",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.2"
   },
   "husky": {
     "hooks": {
@@ -39,7 +47,15 @@
     }
   },
   "scripts": {
-    "lint-stage": "eslint './packages/**/*.ts'"
+    "lint-stage": "eslint './packages/**/*.ts'",
+    "start": "lerna run start",
+    "bootstrap": "lerna bootstrap",
+    "clean": "rm -rf node_modules && npx lerna clean && yarn && yarn bootstrap",
+    "new-version": "lerna verions --conventional-commits --yes",
+    "diff": "lerna diff",
+    "test": "lerna run test",
+    "jest": "jest --colors --runInBand --coverage --watch",
+    "build": "yarn clean && tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
