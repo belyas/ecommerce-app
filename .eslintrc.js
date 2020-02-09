@@ -4,7 +4,12 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'standard'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'standard',
+    'plugin:jest/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -17,7 +22,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  ignorePatterns: ['packages/**/lib/', 'node_modules/'],
+  plugins: ['react', '@typescript-eslint', 'jest'],
   settings: {
     react: {
       createClass: 'createReactClass', // Regex for Component Factory to use,
