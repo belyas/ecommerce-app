@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "jsx": "react",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "module": "ES6",
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "baseUrl": "../",
+    "paths": {
+      "*": ["node_modules/*", "packages", "node_modules/@types/*"]
+    },
+    "types": ["jest", "node"]
+  },
+  "exclude": ["node_modules", "**/lib", "**/*.test.ts"]
+}

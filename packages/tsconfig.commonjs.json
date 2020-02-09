@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "server/tsconfig.commonjs.json"
+    },
+    {
+      "path": "browser/tsconfig.commonjs.json"
+    }
+  ]
+}
