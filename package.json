@@ -54,11 +54,11 @@
     "clean": "rm -rf node_modules && rm yarn.lock && npx lerna clean -y && yarn && yarn bootstrap",
     "new-version": "lerna verions --conventional-commits --yes",
     "diff": "lerna diff",
-    "test": "lerna run test",
-    "jest": "jest --colors -i --coverage",
+    "test": "NODE_ENV=test lerna run test",
+    "jest": "NODE_ENV=test jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
     "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
-    "coveralls": "CI=true jest --coverageReporters=text-lcov | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
