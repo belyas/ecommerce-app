@@ -24,6 +24,7 @@
     "@types/react-dom": "^16.9.0",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
+    "coveralls": "^3.0.9",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
@@ -55,7 +56,8 @@
     "test": "lerna run test",
     "jest": "jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
-    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w"
+    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
