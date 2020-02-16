@@ -33,7 +33,6 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.1",
-    "jest": "^25.1.0",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
@@ -50,12 +49,12 @@
     "lint-stage": "eslint './packages/**/*.ts'",
     "start": "lerna run start",
     "bootstrap": "lerna bootstrap",
-    "clean": "rm -rf node_modules && npx lerna clean && yarn && yarn bootstrap",
+    "clean": "rm -rf node_modules && rm yarn.lock && npx lerna clean -y && yarn && yarn bootstrap",
     "new-version": "lerna verions --conventional-commits --yes",
     "diff": "lerna diff",
     "test": "lerna run test",
     "jest": "jest --colors --runInBand --coverage --watch",
-    "build": "yarn clean && tsc -b ./packages/tsconfig.commonjs.json -w"
+    "build": "tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
