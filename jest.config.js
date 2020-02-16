@@ -15,6 +15,7 @@ module.exports = {
   coveragePathIgnorePatterns: ['.*/lib/.*', '.*/build/.*'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   verbose: true,
+  collectCoverage: true,
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
     '!**/node_modules/**',
