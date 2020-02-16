@@ -11,7 +11,6 @@ env:
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.16.0
   - export PATH="$HOME/.yarn/bin:$PATH"
-  - pip install --user codecov
 install:
   - yarn
 script:
@@ -20,4 +19,4 @@ script:
   - yarn lint-stage
   - yarn jest
 after_success:
-  - codecov --file coverage/lcov.info --disable search
+  - bash <(curl -s https://codecov.io/bash) -v
