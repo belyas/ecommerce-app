@@ -4,7 +4,7 @@ import App from './App';
 
 test('renders Welcome Yassine! text', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Welcome Yassine!/i);
+  const linkElement = getByText(/Welcome Yassine \:\)/i);
 
-  expect(linkElement.textContent).toEqual('Welcome Yassine!');
+  expect(linkElement.textContent).toEqual('Welcome Yassine :)');
 });
