@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "engines": {
-    "node": ">=10"
+    "node": ">=10",
+    "yarn": ">=1.16.0"
   },
   "workspaces": [
     "packages/*"
@@ -57,7 +58,7 @@
     "jest": "jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
     "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coveralls": "CI=true jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
