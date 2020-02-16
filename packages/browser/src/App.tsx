@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import './app.css';
+import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="app">
+      <header className="app-header">
+        <img src={logo} className="app-logo" alt="logo" />
         <p>Welcome Yassine :)</p>
       </header>
     </div>
