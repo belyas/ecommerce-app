@@ -14,5 +14,5 @@ script:
   - yarn build
   - yarn lint-stage
   - yarn jest
-after_script:
+  after_success:
   - yarn coveralls
