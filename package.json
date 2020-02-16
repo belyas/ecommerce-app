@@ -53,7 +53,7 @@
     "new-version": "lerna verions --conventional-commits --yes",
     "diff": "lerna diff",
     "test": "lerna run test",
-    "jest": "jest --colors --runInBand --coverage --watch",
+    "jest": "jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {
