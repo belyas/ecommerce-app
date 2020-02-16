@@ -23,6 +23,3 @@ script:
   - yarn build
   - yarn lint-stage
   - yarn jest
-
-after_success:
-  - yarn coveralls
