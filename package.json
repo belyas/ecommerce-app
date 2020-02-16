@@ -57,7 +57,7 @@
     "jest": "jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
     "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
