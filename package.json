@@ -54,7 +54,8 @@
     "diff": "lerna diff",
     "test": "lerna run test",
     "jest": "jest --colors -i --coverage",
-    "build": "tsc -b ./packages/tsconfig.commonjs.json -w"
+    "build": "tsc -b ./packages/tsconfig.commonjs.json",
+    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
