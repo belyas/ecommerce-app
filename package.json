@@ -8,7 +8,7 @@
   "private": true,
   "engines": {
     "node": ">=10",
-    "yarn": ">=1.16.0"
+    "yarn": ">=1.16.0 < 2.0.0"
   },
   "workspaces": [
     "packages/*"
@@ -56,7 +56,8 @@
     "test": "NODE_ENV=test lerna run test",
     "jest": "NODE_ENV=test jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
-    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w"
+    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
+    "version": "lerna version --conventional-commits"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
