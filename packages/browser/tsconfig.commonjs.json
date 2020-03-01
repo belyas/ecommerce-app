@@ -4,9 +4,9 @@
     "outDir": "lib",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "commonjs",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "tsBuildInfoFile": "./.build/.commonjs.tsinfo"
   },
   "include": ["src/**/*"]
 }

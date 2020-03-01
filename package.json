@@ -55,7 +55,10 @@
     "diff": "lerna diff",
     "test": "NODE_ENV=test lerna run test",
     "jest": "NODE_ENV=test jest --colors -i --coverage",
-    "build": "tsc -b ./packages/tsconfig.commonjs.json",
+    "prebuild": "rm -rf ./packages/**/lib && rm -rf ./packages/**/es && rm -rf ./packages/**/.build",
+    "build": "yarn build:es && yarn build:commonjs",
+    "build:commonjs": "tsc -b ./packages/tsconfig.commonjs.json",
+    "build:es": "tsc -b ./packages/tsconfig.es.json",
     "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {

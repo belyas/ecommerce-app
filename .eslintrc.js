@@ -22,7 +22,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  ignorePatterns: ['packages/**/lib/', 'node_modules/'],
+  ignorePatterns: ['packages/**/lib/', 'packages/**/es/', 'node_modules/'],
   plugins: ['react', '@typescript-eslint', 'jest'],
   settings: {
     react: {

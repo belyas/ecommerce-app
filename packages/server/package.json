@@ -2,12 +2,15 @@
   "name": "@by/server",
   "version": "0.3.0",
   "main": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+  "module": "./es/index.js",
+  "typings": "./es/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "es": "es"
   },
   "devDependencies": {
     "jest": "^24.9.0"

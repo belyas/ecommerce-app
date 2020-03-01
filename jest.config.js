@@ -12,7 +12,7 @@ module.exports = {
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
   testPathIgnorePatterns: ['node_modules'],
-  coveragePathIgnorePatterns: ['.*/lib/.*', '.*/build/.*'],
+  coveragePathIgnorePatterns: ['.*/lib/.*', '.*/es/.*', '.*/.build/.*'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   verbose: true,
   collectCoverage: true,
@@ -23,6 +23,8 @@ module.exports = {
     '!**/serviceWorker.ts',
     '!**/setupTests.ts',
     '!**/*.d.ts',
+    '!**/lib',
+    '!**/es',
   ],
   moduleNameMapper: {
     '\\.(scss|css)$': '<rootDir>/.config/jest/styleMock.ts',

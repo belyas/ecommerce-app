@@ -1,4 +1,4 @@
-import { startServer } from '../src/server';
+import { startServer } from '../server';
 
 describe('Server', () => {
   it('should call startServer with param', () => {
