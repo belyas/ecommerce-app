@@ -51,13 +51,12 @@
     "start": "lerna run start",
     "bootstrap": "lerna bootstrap",
     "clean": "rm -rf node_modules && rm yarn.lock && npx lerna clean -y && yarn && yarn bootstrap",
-    "new-version": "lerna verions --conventional-commits --yes",
+    "new-version": "lerna verion --conventional-commits --yes",
     "diff": "lerna diff",
     "test": "NODE_ENV=test lerna run test",
     "jest": "NODE_ENV=test jest --colors -i --coverage",
     "build": "tsc -b ./packages/tsconfig.commonjs.json",
-    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w",
-    "version": "lerna version --conventional-commits"
+    "build:watch": "tsc -b ./packages/tsconfig.commonjs.json -w"
   },
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
