@@ -1,6 +1,6 @@
 {
   "name": "@by/ecommerce-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Typescript Node/React ecommerce monorepo app",
   "repository": "https://github.com/belyas/ecommerce-app",
   "author": "Yassine Belkaid <yassine.belkaid87@gmail.com>",
