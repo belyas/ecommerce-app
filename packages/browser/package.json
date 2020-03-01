@@ -1,6 +1,6 @@
 {
   "name": "@by/browser",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "./lib/inde.js",
   "module": "./es/index.js",
   "types": "./es/index.d.js",
