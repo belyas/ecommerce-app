@@ -24,5 +24,7 @@ jspm_packages/
 *.lock
 
 lib
+es
 coverage
-packages/**/*.tsbuildinfo
+packages/**/*.build
+packages/**/es
