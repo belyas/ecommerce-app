@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/belyas/ecommerce-app/compare/@by/browser@0.4.0...@by/browser@0.4.1) (2020-03-01)
+
+**Note:** Version bump only for package @by/browser
+
+
+
+
+
 # [0.4.0](https://github.com/belyas/ecommerce-app/compare/@by/browser@0.3.0...@by/browser@0.4.0) (2020-03-01)
 
 
