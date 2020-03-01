@@ -52,7 +52,6 @@
     "bootstrap": "lerna bootstrap",
     "clean": "rm -rf node_modules && rm yarn.lock && npx lerna clean -y && yarn && yarn bootstrap",
     "publish": "lerna publish --conventional-commits --yes",
-    "version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
     "test": "NODE_ENV=test lerna run test",
     "jest": "NODE_ENV=test jest --colors -i --coverage",
